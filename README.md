@@ -17,4 +17,5 @@ They can choose between a clap, a kick, a snare and much more sounds.
 
 - HTML
 - CSS
-- JS
+- Typescript
+- Vite
