@@ -57,19 +57,11 @@ export default class Drumkit {
     window.addEventListener('keydown', this.playSound)
     window.addEventListener('keyup', this.removeTransition)
     for (const key of this.keys) {
-      key.addEventListener('click', (e) => this.clickPlaySound)
+      key.addEventListener('click', (e) => this.clickPlaySound(e as MouseEvent))
     }
   }
 
   private init(): void {
     this.setupEventListeners()
-  }
-
-  public destroy(): void {
-    window.removeEventListener('keydown', this.playSound)
-    window.removeEventListener('keyup', this.removeTransition)
-    for (const key of this.keys) {
-      key.removeEventListener('click', (e) => this.clickPlaySound)
-    }
   }
 }
